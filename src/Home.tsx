@@ -11,7 +11,7 @@ export default function Home() {
                 <img style={styles.img} src="https://intercol.ind.br/assets/images/Logo-light%20copiar.png" alt="" />
             </View>
 
-            
+            <view>ASDASDASD</view>
          
         </View>
     );
