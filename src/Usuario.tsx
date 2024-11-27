@@ -25,6 +25,10 @@ export default function App() {
     }
   };
 
+  const deleteUsuario = (id: string) => {
+    setUsuarios((prevUsuarios) => prevUsuarios.filter((usuario) => usuario.id !== id));
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
@@ -53,6 +57,11 @@ export default function App() {
             <View key={item.id} style={styles.row}>
               <Text style={styles.rowText}>Nome: {item.nome}</Text>
               <Text style={styles.rowText}>Email: {item.email}</Text>
+              <Button
+                title="Deletar"
+                color="#FF0000"
+                onPress={() => deleteUsuario(item.id)}
+              />
             </View>
           ))}
         </View>
